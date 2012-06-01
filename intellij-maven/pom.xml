@@ -216,6 +216,12 @@
     <module>resources</module>
     <module>resources-en</module>
 
+    <module>plugins/spellchecker</module>
+    <module>plugins/properties</module>
+    <module>plugins/devkit</module>
+    <module>plugins/maven/maven-server-api</module>
+    <!--<module>plugins/maven</module>-->
+
     <module>distribution/idea-openapi/${idea.version}</module>
     <module>distribution/idea/${idea.version}</module>
 
@@ -618,6 +624,34 @@
       </dependency>
 
       <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>spellchecker</artifactId>
+        <version>${idea.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>properties</artifactId>
+        <version>${idea.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>devkit</artifactId>
+        <version>${idea.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>maven-server-api</artifactId>
+        <version>${idea.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>maven</artifactId>
+        <version>${idea.version}</version>
+        <scope>system</scope>
+        <systemPath>${idea.home}\\lib\\serviceMessages.jar</systemPath>
+      </dependency>
+
+      <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>serviceMessages</artifactId>
         <version>${idea.version}</version>
@@ -877,6 +911,12 @@
         <groupId>org.codehaus.gant</groupId>
         <artifactId>gant_groovy1.8</artifactId>
         <version>1.9.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-core</artifactId>
+        <version>2.4.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

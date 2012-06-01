@@ -20,13 +20,13 @@
 			<resource>
 				<directory>${idea.home}/resources-en/src</directory>
 				<excludes>
-					<exclude>*.java</exclude>
+					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
 			<resource>
 				<directory>${idea.home}/platform/platform-resources-en/src</directory>
 				<excludes>
-					<exclude>*.java</exclude>
+					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
 		</resources>

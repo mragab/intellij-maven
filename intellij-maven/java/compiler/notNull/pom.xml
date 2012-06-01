@@ -27,8 +27,8 @@
       <resource>
         <directory>${idea.home}/java/compiler/notNull/src</directory>
         <excludes>
-          <exclude>*.java</exclude>
-          <exclude>*.groovy</exclude>
+          <exclude>**/*.java</exclude>
+          <exclude>**/*.groovy</exclude>
         </excludes>
       </resource>
     </resources>

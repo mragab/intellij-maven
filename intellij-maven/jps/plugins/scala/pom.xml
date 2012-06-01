@@ -19,8 +19,8 @@
       <resource>
         <directory>${idea.home}/jps/plugins/scala/src</directory>
         <excludes>
-          <exclude>*.java</exclude>
-          <exclude>*.groovy</exclude>
+          <exclude>**/*.java</exclude>
+          <exclude>**/*.groovy</exclude>
         </excludes>
       </resource>
     </resources>
