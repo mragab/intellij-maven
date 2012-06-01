@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.plushnikov.intellij</groupId>
+  <artifactId>intellij-maven-plugin-importer</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>IntelliJ IDEA maven-plugin-importer plugin</name>
+  <description>IntelliJ IDEA plugin for importing of maven based intellij plugin modules</description>
+  <url>http://code.google.com/p/intellij-maven/</url>
+
+  <scm>
+    <connection>scm:svn:http://intellij-maven.googlecode.com/svn/trunk/intellij-plugin-modul-importer-plugin</connection>
+    <developerConnection>scm:svn:https://intellij-maven.googlecode.com/svn/trunk/intellij-plugin-modul-importer-plugin</developerConnection>
+    <url>http://code.google.com/p/intellij-maven/source/browse/</url>
+  </scm>
+  <issueManagement>
+    <system>Google Code</system>
+    <url>http://code.google.com/p/intellij-maven/issues/list</url>
+  </issueManagement>
+  <organization>
+    <name>Michail Plushnikov</name>
+    <url>http://code.google.com/p/intellij-maven</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>1</id>
+      <name>Michail Plushnikov</name>
+      <email>plushnikov@web.de</email>
+      <roles>
+        <role>Founder</role>
+        <role>Developer</role>
+      </roles>
+      <timezone>1</timezone>
+    </developer>
+  </developers>
+
+  <properties>
+    <idea.version>11.1.2</idea.version>
+    <idea.home>C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition ${idea.version}</idea.home>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>plugin-release</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <!-- Automatically attach sources to build artifact as artifact-version-sources.jar and deploy to local repository -->
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.1.2</version>
+            <inherited>true</inherited>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.8</version>
+            <inherited>true</inherited>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.4</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>idea-openapi</artifactId>
+      <version>${idea.version}</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>annotations</artifactId>
+      <version>${idea.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>devkit</artifactId>
+      <version>${idea.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>maven</artifactId>
+      <version>${idea.version}</version>
+      <scope>system</scope>
+      <systemPath>${idea.home}/plugins/maven/lib/maven.jar</systemPath>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>de.plushnikov.maven.plugin</groupId>
+        <artifactId>intellij-plugin-modul-importer-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <configuration>
+          <pathToMetaInfDirectory>src/main/resources</pathToMetaInfDirectory>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>distribution-package</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <attach>true</attach>
+              <descriptors>
+                <descriptor>src/main/assembly/idea-plugin-assembly.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

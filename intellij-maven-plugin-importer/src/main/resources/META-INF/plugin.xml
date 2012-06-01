@@ -2,7 +2,7 @@
   <id>IntelliJ Plugin Maven Importer</id>
   <name>IntelliJ Plugin Maven Importer</name>
   <description>Imports maven modules for IntelliJ Idea Plugin development</description>
-  <version>1.0</version>
+  <version>0.1</version>
   <vendor url="http://code.google.com/p/intellij-maven" email="intellij-maven@plushnikov.de">Michail Plushnikov</vendor>
 
   <description><![CDATA[
