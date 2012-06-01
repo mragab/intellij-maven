@@ -26,6 +26,6 @@ public class IntellijPluginModulMarker extends AbstractMojo {
   private File pathToUserManifest;
 
   public void execute() throws MojoExecutionException {
-
+    //do nothing
   }
 }
