@@ -31,8 +31,8 @@
       <resource>
         <directory>${idea.home}/java/java-runtime/src</directory>
         <excludes>
-          <exclude>*.java</exclude>
-          <exclude>*.groovy</exclude>
+          <exclude>**/*.java</exclude>
+          <exclude>**/*.groovy</exclude>
         </excludes>
       </resource>
     </resources>
