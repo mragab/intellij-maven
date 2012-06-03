@@ -140,7 +140,7 @@
       <plugin>
         <groupId>de.plushnikov.maven.plugin</groupId>
         <artifactId>intellij-plugin-modul-importer-plugin</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.1</version>
         <configuration>
           <pathToMetaInfDirectory>src/main/resources</pathToMetaInfDirectory>
         </configuration>
