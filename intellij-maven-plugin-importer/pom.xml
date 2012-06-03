@@ -3,15 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.plushnikov.intellij</groupId>
   <artifactId>intellij-maven-plugin-importer</artifactId>
-  <version>0.1</version>
+  <version>0.2-SNAPSHOT</version>
   <name>IntelliJ IDEA maven-plugin-importer plugin</name>
   <description>IntelliJ IDEA plugin for importing of maven based intellij plugin modules</description>
   <url>http://code.google.com/p/intellij-maven/</url>
 
   <scm>
-    <connection>scm:svn:http://intellij-maven.googlecode.com/svn/tags/intellij-maven-plugin-importer-0.1</connection>
-    <developerConnection>scm:svn:https://intellij-maven.googlecode.com/svn/tags/intellij-maven-plugin-importer-0.1</developerConnection>
-    <url>http://code.google.com/p/intellij-maven/source/browse/tags/intellij-maven-plugin-importer-0.1</url>
+    <connection>scm:svn:http://intellij-maven.googlecode.com/svn/trunk/intellij-maven-plugin-importer</connection>
+    <developerConnection>scm:svn:https://intellij-maven.googlecode.com/svn/trunk/intellij-maven-plugin-importer</developerConnection>
+    <url>http://code.google.com/p/intellij-maven/source/browse/</url>
   </scm>
   <issueManagement>
     <system>Google Code</system>
