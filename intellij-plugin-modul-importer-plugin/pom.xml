@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.plushnikov.maven.plugin</groupId>
   <artifactId>intellij-plugin-modul-importer-plugin</artifactId>
-  <version>0.2-SNAPSHOT</version>
+  <version>0.1</version>
   <packaging>maven-plugin</packaging>
 
   <name>IntelliJ-Plugin-Modul-Importer maven plugin</name>
@@ -11,9 +11,9 @@
   <url>http://http://code.google.com/p/intellij-maven/</url>
 
   <scm>
-    <connection>scm:svn:http://intellij-maven.googlecode.com/svn/trunk/intellij-plugin-modul-importer-plugin</connection>
-    <developerConnection>scm:svn:https://intellij-maven.googlecode.com/svn/trunk/intellij-plugin-modul-importer-plugin</developerConnection>
-    <url>http://code.google.com/p/intellij-maven/source/browse/</url>
+    <connection>scm:svn:http://intellij-maven.googlecode.com/svn/tags/intellij-plugin-modul-importer-plugin-0.1</connection>
+    <developerConnection>scm:svn:https://intellij-maven.googlecode.com/svn/tags/intellij-plugin-modul-importer-plugin-0.1</developerConnection>
+    <url>http://code.google.com/p/intellij-maven/source/browse/tags/intellij-plugin-modul-importer-plugin-0.1</url>
   </scm>
   <issueManagement>
     <system>Google Code</system>
@@ -107,4 +107,18 @@
       <version>3.0.4</version>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>Sonatype-releases</id>
+      <name>Sonatype Staging Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <uniqueVersion>false</uniqueVersion>
+    </repository>
+    <snapshotRepository>
+      <id>Sonatype-snapshots</id>
+      <name>Sonatype Snapshot Repository</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
