@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.plushnikov.intellij</groupId>
   <artifactId>intellij-maven-plugin-importer</artifactId>
-  <version>0.2-SNAPSHOT</version>
+  <version>0.1-SNAPSHOT</version>
   <name>IntelliJ IDEA maven-plugin-importer plugin</name>
   <description>IntelliJ IDEA plugin for importing of maven based intellij plugin modules</description>
   <url>http://code.google.com/p/intellij-maven/</url>
 
   <scm>
-    <connection>scm:svn:http://intellij-maven.googlecode.com/svn/trunk/intellij-plugin-modul-importer-plugin</connection>
-    <developerConnection>scm:svn:https://intellij-maven.googlecode.com/svn/trunk/intellij-plugin-modul-importer-plugin</developerConnection>
+    <connection>scm:svn:http://intellij-maven.googlecode.com/svn/trunk/intellij-maven-plugin-importer</connection>
+    <developerConnection>scm:svn:https://intellij-maven.googlecode.com/svn/trunk/intellij-maven-plugin-importer</developerConnection>
     <url>http://code.google.com/p/intellij-maven/source/browse/</url>
   </scm>
   <issueManagement>
@@ -43,6 +43,10 @@
   <properties>
     <idea.version>11.1.2</idea.version>
     <idea.home>C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition ${idea.version}</idea.home>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
   </properties>
 
   <profiles>
