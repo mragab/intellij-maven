@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.plushnikov.maven.plugin</groupId>
   <artifactId>intellij-plugin-modul-importer-plugin</artifactId>
-  <version>0.1</version>
+  <version>0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>IntelliJ-Plugin-Modul-Importer maven plugin</name>
