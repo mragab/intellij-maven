@@ -37,9 +37,9 @@
         </property>
       </activation>
       <properties>
-        <idea9.home>D:/Projekte/Idea/ideaIC-95.627</idea9.home>
-        <idea10.home>D:/Projekte/Idea/ideaIC-107.777</idea10.home>
-        <idea11.home>D:/Projekte/Idea/ideaIC-117.418</idea11.home>
+        <idea9.home>E:/Projekte/Idea/ideaIC-95.627</idea9.home>
+        <idea10.home>E:/Projekte/Idea/ideaIC-107.777</idea10.home>
+        <idea11.home>E:/Projekte/Idea/ideaIC-117.418</idea11.home>
       </properties>
     </profile>
     <profile>
@@ -51,9 +51,12 @@
         </property>
       </activation>
       <properties>
-        <idea9.home>C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition ${idea9.version}</idea9.home>
-        <idea10.home>C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition ${idea10.version}</idea10.home>
-        <idea11.home>C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition ${idea11.version}</idea11.home>
+        <idea9.home>C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition ${idea9.version}
+        </idea9.home>
+        <idea10.home>C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition ${idea10.version}
+        </idea10.home>
+        <idea11.home>C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition ${idea11.version}
+        </idea11.home>
       </properties>
     </profile>
 
@@ -279,6 +282,142 @@
               <goal>jar</goal>
             </goals>
           </execution>
+        </executions>
+      </plugin>
+
+
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <inherited>false</inherited>
+        <executions>
+          <execution>
+            <id>install_trove4j</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>trove4j</artifactId>
+              <file>${idea.home}/lib/trove4j.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_eawtstub</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>eawtstub</artifactId>
+              <file>${idea.home}/lib/eawtstub.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_serviceMessages</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>serviceMessages</artifactId>
+              <file>${idea.home}/lib/serviceMessages.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>install_microba</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>microba</artifactId>
+              <file>${idea.home}/lib/microba.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_jna-utils</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>jna-utils</artifactId>
+              <file>${idea.home}/lib/jna-utils.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_jing</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>jing</artifactId>
+              <file>${idea.home}/xml/relaxng/lib/jing.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_trang</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>trang</artifactId>
+              <file>${idea.home}/xml/relaxng/lib/trang-core.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_rngom</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>rngom</artifactId>
+              <file>${idea.home}/xml/relaxng/lib/rngom-20051226-patched.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_isorelax</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>isorelax</artifactId>
+              <file>${idea.home}/xml/relaxng/lib/isorelax.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+
         </executions>
       </plugin>
     </plugins>
@@ -643,77 +782,52 @@
         <artifactId>maven-server-api</artifactId>
         <version>${idea.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>maven</artifactId>
-        <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\lib\\serviceMessages.jar</systemPath>
-      </dependency>
 
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>serviceMessages</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\lib\\serviceMessages.jar</systemPath>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>trove4j</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\lib\\trove4j.jar</systemPath>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>eawtstub</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\lib\\eawtstub.jar</systemPath>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>microba</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\lib\\microba.jar</systemPath>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>jna-utils</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\lib\\jna-utils.jar</systemPath>
       </dependency>
 
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>jing</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\xml\\relaxng\\lib\\jing.jar</systemPath>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>trang</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\xml\\relaxng\\lib\\trang-core.jar</systemPath>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>rngom</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\xml\\relaxng\\lib\\rngom-20051226-patched.jar</systemPath>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>isorelax</artifactId>
         <version>${idea.version}</version>
-        <scope>system</scope>
-        <systemPath>${idea.home}\\xml\\relaxng\\lib\\isorelax.jar</systemPath>
       </dependency>
 
       <dependency>
