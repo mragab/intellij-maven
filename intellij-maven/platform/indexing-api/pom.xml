@@ -9,44 +9,25 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>lang-api</artifactId>
+  <artifactId>indexing-api</artifactId>
   <version>${idea.version}</version>
 
-  <name>Maven Integration of lang-api modul</name>
-  <description>Maven modul for lang-api jar</description>
+  <name>Maven Integration of indexing-api modul</name>
+  <description>Maven modul for indexing-api jar</description>
 
   <build>
-    <sourceDirectory>${idea.home}/platform/lang-api/src</sourceDirectory>
+    <sourceDirectory>${idea.home}/platform/indexing-api/src</sourceDirectory>
   </build>
 
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>platform-api</artifactId>
+      <artifactId>core-api</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>lvcs-api</artifactId>
-    </dependency>
-
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>projectModel-api</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>indexing-api</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>be.cyberelf.nanoxml</groupId>
-      <artifactId>nanoxml</artifactId>
-    </dependency>
-
   </dependencies>
 
 

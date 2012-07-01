@@ -46,6 +46,19 @@
     </dependency>
 
     <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>projectModel-impl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>indexing-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>indexing-impl</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>org.jetbrains.thirdparthy</groupId>
       <artifactId>eawtstub</artifactId>
     </dependency>
@@ -106,6 +119,11 @@
       <artifactId>javahelp</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>com.miglayout</groupId>
+      <artifactId>miglayout</artifactId>
+      <classifier>swing</classifier>
+    </dependency>
   </dependencies>
 
   <profiles>
@@ -114,6 +132,29 @@
       <activation>
         <property>
           <name>!IntelliJ</name>
+        </property>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>cglib</groupId>
+          <artifactId>cglib</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>asm</groupId>
+          <artifactId>asm</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>asm</groupId>
+          <artifactId>asm-commons</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>intellij-12</id>
+      <activation>
+        <property>
+          <name>IntelliJ</name>
+          <value>12</value>
         </property>
       </activation>
       <dependencies>

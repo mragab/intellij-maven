@@ -13,6 +13,25 @@
   <version>${idea.version}</version>
   <name>Maven module for jps-model</name>
   <description>Maven integration for module jps-model</description>
+
+  <profiles>
+    <profile>
+      <id>intellij-12</id>
+      <activation>
+        <property>
+          <name>IntelliJ</name>
+          <value>12</value>
+        </property>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>org.jetbrains.thirdparthy</groupId>
+          <artifactId>asm4-all</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+
   <build>
     <sourceDirectory>${idea.home}/jps/model/src</sourceDirectory>
     <resources>
@@ -52,7 +71,6 @@
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>util</artifactId>
-
     </dependency>
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
