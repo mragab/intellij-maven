@@ -9,21 +9,22 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>util-rt</artifactId>
+  <artifactId>projectModel-api</artifactId>
   <version>${idea.version}</version>
 
-  <name>Maven Integration of util-rt modul</name>
-  <description>Maven modul for util-rt jar</description>
-
+  <name>Maven Integration of projectModel-api modul</name>
+  <description>Maven modul for projectModel-api jar</description>
 
   <build>
-    <sourceDirectory>${idea.home}/platform/util-rt/src</sourceDirectory>
+    <sourceDirectory>${idea.home}/platform/projectModel-api/src</sourceDirectory>
   </build>
 
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>annotations</artifactId>
+      <artifactId>core-api</artifactId>
     </dependency>
   </dependencies>
+
+
 </project>

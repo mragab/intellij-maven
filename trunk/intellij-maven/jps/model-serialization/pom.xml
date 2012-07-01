@@ -1,53 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>parent</artifactId>
     <groupId>org.jetbrains.idea</groupId>
     <version>1</version>
-    <relativePath>../../../pom.xml</relativePath>
+    <relativePath>../../pom.xml</relativePath>
   </parent>
   <groupId>org.jetbrains.idea</groupId>
-  <artifactId>javac2</artifactId>
+  <artifactId>jps-model-serialization</artifactId>
   <version>${idea.version}</version>
-  <name>Maven module for javac2</name>
-  <description>Maven integration for module javac2</description>
+  <name>Maven module for jps-model-serialization</name>
+  <description>Maven integration for module jps-model-serialization</description>
 
   <build>
-    <sourceDirectory>${idea.home}/java/compiler/javac2/src</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>${idea.home}/java/compiler/javac2/src</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-          <exclude>**/*.groovy</exclude>
-        </excludes>
-      </resource>
-    </resources>
+    <sourceDirectory>${idea.home}/jps/model-serialization/src</sourceDirectory>
   </build>
 
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>forms-compiler</artifactId>
+      <artifactId>util</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>forms_rt</artifactId>
+      <artifactId>jps-model-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>notNull</artifactId>
+      <artifactId>jps-model-impl</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>instrumentation-util</artifactId>
+      <artifactId>projectModel-impl</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.ant</groupId>
-      <artifactId>ant</artifactId>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom</artifactId>
     </dependency>
   </dependencies>
 </project>
