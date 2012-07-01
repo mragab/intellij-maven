@@ -221,6 +221,7 @@
     <module>platform/testRunner</module>
     <module>platform/usageView</module>
     <module>platform/util</module>
+    <module>platform/util-rt</module>
     <module>platform/vcs-api</module>
     <module>platform/vcs-impl</module>
     <module>platform/xdebugger-api</module>
@@ -707,6 +708,11 @@
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
         <artifactId>util</artifactId>
+        <version>${idea.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>util-rt</artifactId>
         <version>${idea.version}</version>
       </dependency>
       <dependency>
