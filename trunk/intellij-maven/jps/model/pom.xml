@@ -28,6 +28,14 @@
           <groupId>org.jetbrains.thirdparthy</groupId>
           <artifactId>asm4-all</artifactId>
         </dependency>
+        <dependency>
+          <groupId>org.jetbrains.idea</groupId>
+          <artifactId>jps-model-api</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.jetbrains.idea</groupId>
+          <artifactId>jps-model-impl</artifactId>
+        </dependency>
       </dependencies>
     </profile>
   </profiles>
@@ -67,6 +75,7 @@
       </plugin>
     </plugins>
   </build>
+
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
