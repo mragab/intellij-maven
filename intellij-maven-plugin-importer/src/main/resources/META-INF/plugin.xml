@@ -17,7 +17,7 @@
      to your maven project.
     ]]>
   </description>
-  <category>Tools Integration</category>
+  <category>Plugin Development</category>
   
   <depends>DevKit</depends>
   <depends>org.jetbrains.idea.maven</depends>
