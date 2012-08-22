@@ -3,99 +3,132 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.jetbrains.idea</groupId>
-
-  <artifactId>idea-openapi</artifactId>
-  <version>11.1.2</version>
+  <artifactId>idea</artifactId>
+  <version>11.1.3</version>
   <packaging>pom</packaging>
 
-  <name>Maven Integration of all IntelliJ openapi modulls</name>
-  <description>Maven modul for all IntelliJ openapi jar</description>
+  <name>Maven Integration of all IntelliJ Idea Impl modulls</name>
+  <description>Maven modul for idea jar</description>
 
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>core-api</artifactId>
+      <artifactId>core-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>platform-api</artifactId>
+      <artifactId>platform-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>lvcs-api</artifactId>
+      <artifactId>lvcs-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>lang-api</artifactId>
+      <artifactId>lang-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>vcs-api</artifactId>
+      <artifactId>testRunner</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>usageView</artifactId>
+      <artifactId>smRunner</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>xdebugger-api</artifactId>
+      <artifactId>xdebugger-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>xml-openapi</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>java-psi-api</artifactId>
+      <artifactId>testFramework</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>openapi</artifactId>
+      <artifactId>tests_bootstrap</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>testFramework-java</artifactId>
+      <artifactId>xml</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!--<dependency>-->
+    <!--<groupId>org.jetbrains.idea</groupId>-->
+    <!--<artifactId>relaxng</artifactId>-->
+    <!--<version>${project.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+    <!--<groupId>org.jetbrains.idea</groupId>-->
+    <!--<artifactId>spellchecker</artifactId>-->
+    <!--<version>${project.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+    <!--<groupId>org.jetbrains.idea</groupId>-->
+    <!--<artifactId>images</artifactId>-->
+    <!--<version>${project.version}</version>-->
+    <!--</dependency>-->
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>notNull</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>debugger-openapi</artifactId>
+      <artifactId>platform-main</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>compiler-openapi</artifactId>
+      <artifactId>java-psi-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>dom-openapi</artifactId>
+      <artifactId>java-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>execution-openapi</artifactId>
+      <artifactId>compiler-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>jsp-openapi</artifactId>
+      <artifactId>debugger-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>jsp-base-openapi</artifactId>
+      <artifactId>dom-impl</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>execution-impl</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>jsp-spi</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>idea-ui</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>RegExpSupport</artifactId>
       <version>${project.version}</version>
     </dependency>
 

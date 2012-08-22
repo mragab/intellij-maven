@@ -36,6 +36,7 @@
       </plugin>
     </plugins>
   </build>
+
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
@@ -48,17 +49,14 @@
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>forms_rt</artifactId>
-
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>forms-compiler</artifactId>
-
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>notNull</artifactId>
-
     </dependency>
 
     <dependency>
@@ -113,6 +111,34 @@
           <version>1.7.0</version>
           <scope>system</scope>
           <systemPath>${java.home}/../lib/tools.jar</systemPath>
+        </dependency>
+      </dependencies>
+    </profile>
+
+    <profile>
+      <id>intellij-12</id>
+      <activation>
+        <property>
+          <name>IntelliJ</name>
+          <value>12</value>
+        </property>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>org.jetbrains.idea</groupId>
+          <artifactId>instrumentation-util</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.jetbrains.idea</groupId>
+          <artifactId>jps-model-api</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.jetbrains.idea</groupId>
+          <artifactId>jps-model-impl</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.jetbrains.idea</groupId>
+          <artifactId>jps-model-serialization</artifactId>
         </dependency>
       </dependencies>
     </profile>

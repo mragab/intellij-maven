@@ -1,21 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.jetbrains.idea</groupId>
-		<artifactId>parent</artifactId>
-		<version>1</version>
+  <parent>
+    <groupId>org.jetbrains.idea</groupId>
+    <artifactId>parent</artifactId>
+    <version>1</version>
     <relativePath>../../pom.xml</relativePath>
-	</parent>
+  </parent>
 
-	<artifactId>xml</artifactId>
+  <artifactId>xml</artifactId>
   <version>${idea.version}</version>
 
-	<name>Maven Integration of xml modul</name>
-	<description>Maven modul for xml jar</description>
+  <name>Maven Integration of xml modul</name>
+  <description>Maven modul for xml jar</description>
 
-	<dependencies>
+  <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>xml-openapi</artifactId>
@@ -58,9 +58,27 @@
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
     </dependency>
-	</dependencies>
+  </dependencies>
 
-	<build>
-		<sourceDirectory>${idea.home}/xml/impl/src</sourceDirectory>
-	</build>
+  <build>
+    <sourceDirectory>${idea.home}/xml/impl/src</sourceDirectory>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>intellij-12</id>
+      <activation>
+        <property>
+          <name>IntelliJ</name>
+          <value>12</value>
+        </property>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>xml-resolver</groupId>
+          <artifactId>xml-resolver</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 </project>
