@@ -41,7 +41,7 @@
   </developers>
 
   <properties>
-    <idea.version>11.1.2</idea.version>
+    <idea.version>11.1.3</idea.version>
     <idea.home>C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition ${idea.version}</idea.home>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

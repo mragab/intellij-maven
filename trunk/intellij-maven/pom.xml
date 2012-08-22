@@ -13,7 +13,7 @@
   <properties>
     <idea9.version>9.0.4</idea9.version>
     <idea10.version>10.5.4</idea10.version>
-    <idea11.version>11.1.2</idea11.version>
+    <idea11.version>11.1.3</idea11.version>
     <idea12.version>12.0-SNAPSHOT</idea12.version>
 
     <!-- Idea requires JDK 1.6 -->
@@ -40,8 +40,8 @@
       <properties>
         <idea9.home>E:/Projekte/Idea/ideaIC-95.627</idea9.home>
         <idea10.home>E:/Projekte/Idea/ideaIC-107.777</idea10.home>
-        <idea11.home>E:/Projekte/Idea/ideaIC-117.418</idea11.home>
-        <idea12.home>E:/Projekte/Idea/ideaIC-120.11</idea12.home>
+        <idea11.home>E:/Projekte/Idea/ideaIC-117.798</idea11.home>
+        <idea12.home>E:/Projekte/Idea/ideaIC-122.100</idea12.home>
       </properties>
     </profile>
     <profile>
@@ -55,8 +55,8 @@
       <properties>
         <idea9.home>D:/Idea/ideaIC-95.627</idea9.home>
         <idea10.home>D:/Idea/ideaIC-107.777</idea10.home>
-        <idea11.home>D:/Idea/ideaIC-117.418</idea11.home>
-        <idea12.home>D:/Idea/ideaIC-118.749</idea12.home>
+        <idea11.home>D:/Idea/ideaIC-117.798</idea11.home>
+        <idea12.home>D:/Idea/ideaIC-122.100</idea12.home>
       </properties>
     </profile>
 
@@ -203,6 +203,7 @@
     <module>java/compiler/forms-compiler</module>
     <module>java/idea-ui</module>
     <module>java/java-impl</module>
+    <module>java/java-indexing-api</module>
     <module>java/java-indexing-impl</module>
     <module>java/java-psi-api</module>
     <module>java/java-psi-impl</module>
@@ -322,6 +323,7 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
     <plugins>
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
@@ -336,7 +338,6 @@
           </execution>
         </executions>
       </plugin>
-
 
       <plugin>
         <artifactId>maven-install-plugin</artifactId>
@@ -530,6 +531,11 @@
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
         <artifactId>java-impl</artifactId>
+        <version>${idea.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>java-indexing-api</artifactId>
         <version>${idea.version}</version>
       </dependency>
       <dependency>
@@ -1107,6 +1113,11 @@
         <groupId>org.apache.xmlbeans</groupId>
         <artifactId>xmlbeans</artifactId>
         <version>2.3.0</version>
+      </dependency>
+      <dependency>
+        <groupId>xml-resolver</groupId>
+        <artifactId>xml-resolver</artifactId>
+        <version>1.2</version>
       </dependency>
 
       <dependency>

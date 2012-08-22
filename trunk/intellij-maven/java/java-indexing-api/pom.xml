@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>parent</artifactId>
@@ -9,15 +9,16 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
   <groupId>org.jetbrains.idea</groupId>
-  <artifactId>java-psi-api</artifactId>
+  <artifactId>java-indexing-api</artifactId>
   <version>${idea.version}</version>
-  <name>Maven module for java-psi-api</name>
-  <description>Maven integration for module java-psi-api</description>
+  <name>Maven module for java-indexing-api</name>
+  <description>Maven integration for module java-indexing-api</description>
+
   <build>
-    <sourceDirectory>${idea.home}/java/java-psi-api/src</sourceDirectory>
+    <sourceDirectory>${idea.home}/java/java-indexing-api/src</sourceDirectory>
     <resources>
       <resource>
-        <directory>${idea.home}/java/java-psi-api/src</directory>
+        <directory>${idea.home}/java/java-api/src</directory>
         <excludes>
           <exclude>**/*.java</exclude>
           <exclude>**/*.groovy</exclude>
@@ -25,28 +26,20 @@
       </resource>
     </resources>
   </build>
+
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>core-api</artifactId>
     </dependency>
-  </dependencies>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>java-psi-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>indexing-api</artifactId>
+    </dependency>
 
-  <profiles>
-    <profile>
-      <id>intellij-12</id>
-      <activation>
-        <property>
-          <name>IntelliJ</name>
-          <value>12</value>
-        </property>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>org.jetbrains.idea</groupId>
-          <artifactId>projectModel-api</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
+  </dependencies>
 </project>
