@@ -140,6 +140,10 @@
           <groupId>org.jetbrains.idea</groupId>
           <artifactId>jps-model-serialization</artifactId>
         </dependency>
+        <dependency>
+          <groupId>org.jetbrains.idea</groupId>
+          <artifactId>ui-designer-jps-plugin</artifactId>
+        </dependency>
       </dependencies>
     </profile>
   </profiles>
