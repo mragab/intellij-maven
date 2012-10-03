@@ -157,6 +157,14 @@
           <artifactId>miglayout</artifactId>
           <classifier>swing</classifier>
         </dependency>
+        <dependency>
+          <groupId>org.xerial.snappy</groupId>
+          <artifactId>snappy-java</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.sanselan</groupId>
+          <artifactId>sanselan</artifactId>
+        </dependency>
 
         <dependency>
           <groupId>cglib</groupId>
