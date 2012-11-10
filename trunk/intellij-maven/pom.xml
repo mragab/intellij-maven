@@ -13,7 +13,7 @@
   <properties>
     <idea9.version>9.0.4</idea9.version>
     <idea10.version>10.5.4</idea10.version>
-    <idea11.version>11.1.3</idea11.version>
+    <idea11.version>11.1.4</idea11.version>
     <idea12.version>12.0-SNAPSHOT</idea12.version>
 
     <!-- Idea requires JDK 1.6 -->
@@ -45,9 +45,9 @@
         <!--IntelliJ IDEA 10.5.4-->
         <idea10.home>E:/Projekte/Idea/ideaIC-107.777</idea10.home>
         <!--IntelliJ IDEA 11.1.3-->
-        <idea11.home>E:/Projekte/Idea/ideaIC-117.798</idea11.home>
+        <idea11.home>E:/Projekte/Idea/ideaIC-117.963</idea11.home>
         <!--IntelliJ IDEA 12.0.0 EAP-->
-        <idea12.home>E:/Projekte/Idea/ideaIC-122.395</idea12.home>
+        <idea12.home>E:/Projekte/Idea/ideaIC-122.746</idea12.home>
       </properties>
     </profile>
     <profile>
@@ -492,6 +492,20 @@
               <groupId>org.jetbrains.thirdparthy</groupId>
               <artifactId>isorelax</artifactId>
               <file>${idea.home}/xml/relaxng/lib/isorelax.jar</file>
+              <version>${idea.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_proxyvole</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>proxyvole</artifactId>
+              <file>${idea.home}/lib/proxy-vole_20120920.jar</file>
               <version>${idea.version}</version>
               <packaging>jar</packaging>
             </configuration>
@@ -973,6 +987,11 @@
         <artifactId>asm4-all</artifactId>
         <version>${idea.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.jetbrains.thirdparthy</groupId>
+        <artifactId>proxyvole</artifactId>
+        <version>${idea.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>org.apache.ant</groupId>
@@ -1191,6 +1210,11 @@
         <artifactId>miglayout</artifactId>
         <version>3.7.1</version>
         <classifier>swing</classifier>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.2.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
