@@ -4,7 +4,7 @@
 
   <groupId>org.jetbrains.idea</groupId>
   <artifactId>idea</artifactId>
-  <version>11.1.3</version>
+  <version>11.1.4</version>
   <packaging>pom</packaging>
 
   <name>Maven Integration of all IntelliJ Idea Impl modulls</name>
