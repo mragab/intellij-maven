@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.jetbrains.idea</groupId>
+    <artifactId>parent</artifactId>
+    <version>1</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  
+  <artifactId>parent.eleven</artifactId>
+  <version>1</version>
+  <packaging>pom</packaging>
+
+  <name>Maven Integration for IntelliJ IDEA 11</name>
+  <description>Maven parent modul for IntelliJ IDEA 11</description>
+   
+  <modules>
+    <module>11.1.4</module>    
+  </modules>
+  
+</project>
