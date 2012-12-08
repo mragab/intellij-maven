@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
+
   <parent>
     <groupId>org.jetbrains.idea</groupId>
     <artifactId>parent.eleven</artifactId>
     <version>1</version>
   </parent>
-  
+
   <groupId>org.jetbrains.idea</groupId>
   <artifactId>parent.eleven.1114</artifactId>
   <version>11.1.4</version>
@@ -17,11 +17,11 @@
   <description>Maven parent modul for IntelliJ IDEA 11.1.4</description>
 
   <properties>
-        <idea.home>${idea1114.home}</idea.home>
-        <cglib.version>2.2.2</cglib.version>
-        <asm.version>3.3</asm.version>
-        <jna.version>3.4.0</jna.version>
-        <groovy-all.version>1.8.6</groovy-all.version>
+    <idea.home>${idea1114.home}</idea.home>
+    <cglib.version>2.2.2</cglib.version>
+    <asm.version>3.3</asm.version>
+    <jna.version>3.4.0</jna.version>
+    <groovy-all.version>1.8.6</groovy-all.version>
 
   </properties>
 
@@ -740,7 +740,7 @@
         <version>1.2.16</version>
       </dependency>
       <dependency>
-        <groupId>xstream</groupId>
+        <groupId>com.thoughtworks.xstream</groupId>
         <artifactId>xstream</artifactId>
         <version>1.2.1</version>
       </dependency>

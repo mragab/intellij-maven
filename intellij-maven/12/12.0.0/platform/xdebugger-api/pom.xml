@@ -24,25 +24,11 @@
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>lang-api</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>platform-impl</artifactId>
+    </dependency>
   </dependencies>
-
-
-  <profiles>
-    <profile>
-      <id>intellij-12</id>
-      <activation>
-        <property>
-          <name>IntelliJ</name>
-          <value>12</value>
-        </property>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>org.jetbrains.idea</groupId>
-          <artifactId>platform-impl</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
 
 </project>

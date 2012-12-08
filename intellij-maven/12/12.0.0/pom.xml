@@ -22,9 +22,7 @@
     <asm.version>3.3</asm.version>
     <jna.version>3.4.0</jna.version>
     <groovy-all.version>1.8.6</groovy-all.version>
-    <netty.version>3.5.5.Final</netty.version>
-
-    <netty.version>3.3.1.Final</netty.version>
+    <netty.version>3.5.10.Final</netty.version>
   </properties>
 
   <modules>
@@ -809,8 +807,8 @@
       </dependency>
       <dependency>
         <groupId>com.jgoodies</groupId>
-        <artifactId>looks</artifactId>
-        <version>2.2.2</version>
+        <artifactId>jgoodies-looks</artifactId>
+        <version>2.5.2</version>
       </dependency>
       <dependency>
         <groupId>org.picocontainer</groupId>
@@ -820,7 +818,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>11.0.1</version>
+        <version>12.0</version>
       </dependency>
       <dependency>
         <groupId>com.google.protobuf</groupId>
@@ -853,9 +851,9 @@
         <version>1.2.16</version>
       </dependency>
       <dependency>
-        <groupId>xstream</groupId>
+        <groupId>com.thoughtworks.xstream</groupId>
         <artifactId>xstream</artifactId>
-        <version>1.2.1</version>
+        <version>1.4.3</version>
       </dependency>
       <dependency>
         <groupId>be.cyberelf.nanoxml</groupId>

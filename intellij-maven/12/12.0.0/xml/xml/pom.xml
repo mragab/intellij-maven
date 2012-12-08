@@ -46,10 +46,7 @@
       <groupId>xerces</groupId>
       <artifactId>xercesImpl</artifactId>
     </dependency>
-    <dependency>
-      <groupId>commons-collections</groupId>
-      <artifactId>commons-collections</artifactId>
-    </dependency>
+
     <dependency>
       <groupId>org.apache.xmlbeans</groupId>
       <artifactId>xmlbeans</artifactId>
@@ -58,27 +55,14 @@
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
     </dependency>
+    <dependency>
+      <groupId>xml-resolver</groupId>
+      <artifactId>xml-resolver</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
     <sourceDirectory>${idea.home}/xml/impl/src</sourceDirectory>
   </build>
 
-  <profiles>
-    <profile>
-      <id>intellij-12</id>
-      <activation>
-        <property>
-          <name>IntelliJ</name>
-          <value>12</value>
-        </property>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>xml-resolver</groupId>
-          <artifactId>xml-resolver</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
 </project>

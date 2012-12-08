@@ -14,28 +14,6 @@
   <name>Maven module for forms-compiler</name>
   <description>Maven integration for module forms-compiler</description>
 
-  <profiles>
-    <profile>
-      <id>intellij-12</id>
-      <activation>
-        <property>
-          <name>IntelliJ</name>
-          <value>12</value>
-        </property>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>org.jetbrains.idea</groupId>
-          <artifactId>instrumentation-util</artifactId>
-        </dependency>
-        <dependency>
-          <groupId>org.jetbrains.thirdparthy</groupId>
-          <artifactId>asm4-all</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
-
   <build>
     <sourceDirectory>${idea.home}/java/compiler/forms-compiler/src</sourceDirectory>
     <resources>
@@ -48,10 +26,19 @@
       </resource>
     </resources>
   </build>
+
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>forms_rt</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>instrumentation-util</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.thirdparthy</groupId>
+      <artifactId>asm4-all</artifactId>
     </dependency>
   </dependencies>
 </project>
