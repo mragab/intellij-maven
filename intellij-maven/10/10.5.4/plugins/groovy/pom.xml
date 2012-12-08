@@ -108,11 +108,7 @@
       <artifactId>ant</artifactId>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>jps-builders</artifactId>
-      <scope>provided</scope>
-    </dependency>
+
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>spellchecker</artifactId>

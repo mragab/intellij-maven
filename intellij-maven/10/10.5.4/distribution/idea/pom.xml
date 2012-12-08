@@ -91,11 +91,7 @@
       <artifactId>platform-main</artifactId>
       <version>${project.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>java-psi-impl</artifactId>
-      <version>${project.version}</version>
-    </dependency>
+
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>java-impl</artifactId>

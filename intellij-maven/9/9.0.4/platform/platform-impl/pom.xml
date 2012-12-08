@@ -32,10 +32,7 @@
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>lvcs-api</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>core-impl</artifactId>
-    </dependency>
+
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>bootstrap</artifactId>

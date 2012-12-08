@@ -30,10 +30,6 @@
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>core-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
       <artifactId>bootstrap</artifactId>
     </dependency>
     <dependency>
