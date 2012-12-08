@@ -35,8 +35,6 @@
     <module>java/compiler/forms-compiler</module>
     <module>java/idea-ui</module>
     <module>java/java-impl</module>
-    <module>java/java-psi-api</module>
-    <module>java/java-psi-impl</module>
     <module>java/java-runtime</module>
     <module>java/java-tests</module>
     <module>java/compiler/javac2</module>
@@ -47,19 +45,9 @@
     <module>java/openapi</module>
     <module>java/testFramework</module>
 
-    <module>jps</module>
-    <module>jps/plugins/appLauncher</module>
-    <module>jps/jps-builders</module>
-    <module>jps/model</module>
-    <module>jps/plugins/scala</module>
-    <module>jps/antLayout</module>
-
-
     <module>platform/annotations</module>
     <module>platform/boot</module>
     <module>platform/bootstrap</module>
-    <module>platform/core-api</module>
-    <module>platform/core-impl</module>
     <module>platform/extensions</module>
     <module>platform/forms_rt</module>
     <module>platform/icons</module>
@@ -72,7 +60,6 @@
     <module>platform/platform-main</module>
     <module>platform/platform-resources</module>
     <module>platform/platform-resources-en</module>
-    <module>platform/platform-tests</module>
     <module>platform/smRunner</module>
     <module>platform/testFramework</module>
     <module>platform/testFramework/tests_bootstrap</module>
@@ -90,7 +77,6 @@
     <module>xml/dom-impl</module>
 
     <module>RegExpSupport</module>
-    <module>jdkAnnotations</module>
     <module>resources</module>
     <module>resources-en</module>
 
@@ -206,63 +192,6 @@
               <packaging>jar</packaging>
             </configuration>
           </execution>
-          <execution>
-            <id>install_jing</id>
-            <phase>initialize</phase>
-            <goals>
-              <goal>install-file</goal>
-            </goals>
-            <configuration>
-              <groupId>org.jetbrains.thirdparthy</groupId>
-              <artifactId>jing</artifactId>
-              <file>${idea.home}/xml/relaxng/lib/jing.jar</file>
-              <version>${project.version}</version>
-              <packaging>jar</packaging>
-            </configuration>
-          </execution>
-          <execution>
-            <id>install_trang</id>
-            <phase>initialize</phase>
-            <goals>
-              <goal>install-file</goal>
-            </goals>
-            <configuration>
-              <groupId>org.jetbrains.thirdparthy</groupId>
-              <artifactId>trang</artifactId>
-              <file>${idea.home}/xml/relaxng/lib/trang-core.jar</file>
-              <version>${project.version}</version>
-              <packaging>jar</packaging>
-            </configuration>
-          </execution>
-          <execution>
-            <id>install_rngom</id>
-            <phase>initialize</phase>
-            <goals>
-              <goal>install-file</goal>
-            </goals>
-            <configuration>
-              <groupId>org.jetbrains.thirdparthy</groupId>
-              <artifactId>rngom</artifactId>
-              <file>${idea.home}/xml/relaxng/lib/rngom-20051226-patched.jar</file>
-              <version>${project.version}</version>
-              <packaging>jar</packaging>
-            </configuration>
-          </execution>
-          <execution>
-            <id>install_isorelax</id>
-            <phase>initialize</phase>
-            <goals>
-              <goal>install-file</goal>
-            </goals>
-            <configuration>
-              <groupId>org.jetbrains.thirdparthy</groupId>
-              <artifactId>isorelax</artifactId>
-              <file>${idea.home}/xml/relaxng/lib/isorelax.jar</file>
-              <version>${project.version}</version>
-              <packaging>jar</packaging>
-            </configuration>
-          </execution>
-
         </executions>
       </plugin>
     </plugins>
@@ -322,16 +251,6 @@
       </dependency>
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
-        <artifactId>java-psi-api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>java-psi-impl</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
         <artifactId>java-runtime</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -375,45 +294,10 @@
         <artifactId>javacvs-src</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>tasks-java</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>testFramework-java</artifactId>
-        <version>${project.version}</version>
-      </dependency>
 
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
-        <artifactId>jps-model</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>jps-appLauncher</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>jps-builders</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>jps-scala</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>antlayout</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>jps</artifactId>
+        <artifactId>testFramework-java</artifactId>
         <version>${project.version}</version>
       </dependency>
 
@@ -432,16 +316,7 @@
         <artifactId>bootstrap</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>core-api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>core-impl</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
         <artifactId>extensions</artifactId>
@@ -502,11 +377,7 @@
         <artifactId>platform-resources-en</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>platform-tests</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
         <artifactId>smRunner</artifactId>
@@ -579,12 +450,6 @@
         <version>${project.version}</version>
       </dependency>
 
-
-      <dependency>
-        <groupId>org.jetbrains.idea</groupId>
-        <artifactId>jdkAnnotations</artifactId>
-        <version>${project.version}</version>
-      </dependency>
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
         <artifactId>RegExpSupport</artifactId>
@@ -646,27 +511,6 @@
       <dependency>
         <groupId>org.jetbrains.thirdparthy</groupId>
         <artifactId>jna-utils</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.jetbrains.thirdparthy</groupId>
-        <artifactId>jing</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.thirdparthy</groupId>
-        <artifactId>trang</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.thirdparthy</groupId>
-        <artifactId>rngom</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jetbrains.thirdparthy</groupId>
-        <artifactId>isorelax</artifactId>
         <version>${project.version}</version>
       </dependency>
 

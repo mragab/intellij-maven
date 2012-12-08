@@ -54,10 +54,7 @@
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>resources-en</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>java-psi-api</artifactId>
-    </dependency>
+
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>forms_rt</artifactId>

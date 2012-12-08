@@ -25,11 +25,5 @@
       </resource>
     </resources>
   </build>
-  <dependencies>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>jps-builders</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+
 </project>

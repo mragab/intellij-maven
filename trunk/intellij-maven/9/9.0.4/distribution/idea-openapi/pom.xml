@@ -18,11 +18,6 @@
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>core-api</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
       <artifactId>platform-api</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -57,11 +52,7 @@
       <version>${project.version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>java-psi-api</artifactId>
-      <version>${project.version}</version>
-    </dependency>
+
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>openapi</artifactId>

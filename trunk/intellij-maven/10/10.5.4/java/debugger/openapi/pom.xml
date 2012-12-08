@@ -36,10 +36,6 @@
       <artifactId>jsp-openapi</artifactId>
 
     </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>java-psi-api</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>com.sun</groupId>
