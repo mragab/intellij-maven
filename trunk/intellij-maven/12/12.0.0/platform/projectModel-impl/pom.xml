@@ -17,6 +17,14 @@
 
   <build>
     <sourceDirectory>${idea.home}/platform/projectModel-impl/src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>${idea.home}/platform/projectModel-impl/src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
   </build>
 
   <dependencies>

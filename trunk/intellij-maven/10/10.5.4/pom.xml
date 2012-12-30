@@ -7,7 +7,7 @@
     <artifactId>parent.ten</artifactId>
     <version>1</version>
   </parent>
-  
+
   <groupId>org.jetbrains.idea</groupId>
   <artifactId>parent.ten.1054</artifactId>
   <version>10.5.4</version>
@@ -17,15 +17,15 @@
   <description>Maven parent modul for IntelliJ IDEA 10.5.4</description>
 
   <properties>
-        <idea.home>${idea1054.home}</idea.home>
-        <cglib.version>2.2</cglib.version>
-        <asm.version>3.3</asm.version>
-        <jna.version>3.4.0</jna.version>
-        <groovy-all.version>1.8.6</groovy-all.version>
+    <idea.home>${idea1054.home}</idea.home>
+    <cglib.version>2.2</cglib.version>
+    <asm.version>3.3</asm.version>
+    <jna.version>3.4.0</jna.version>
+    <groovy-all.version>1.8.6</groovy-all.version>
 
   </properties>
 
-   <modules>
+  <modules>
     <module>java/compiler/impl</module>
     <module>java/compiler/openapi</module>
     <module>java/debugger/impl</module>

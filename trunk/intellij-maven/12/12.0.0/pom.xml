@@ -97,6 +97,7 @@
 
     <module>xml/xml-openapi</module>
     <module>xml/xml</module>
+    <module>xml/relaxng</module>
     <module>xml/dom-openapi</module>
     <module>xml/dom-impl</module>
 
@@ -104,6 +105,8 @@
     <module>jdkAnnotations</module>
     <module>resources</module>
     <module>resources-en</module>
+    <module>images</module>
+    <module>colorSchemes</module>
 
     <module>plugins/spellchecker</module>
     <module>plugins/properties</module>
@@ -695,7 +698,16 @@
         <artifactId>resources-en</artifactId>
         <version>${project.version}</version>
       </dependency>
-
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>images</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>color-schemes</artifactId>
+        <version>${project.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
         <artifactId>spellchecker</artifactId>
