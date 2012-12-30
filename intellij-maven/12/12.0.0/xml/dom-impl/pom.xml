@@ -1,20 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.jetbrains.idea</groupId>
-		<artifactId>parent.twelve.1200</artifactId>
-		<version>12.0.0</version>
+  <parent>
+    <groupId>org.jetbrains.idea</groupId>
+    <artifactId>parent.twelve.1200</artifactId>
+    <version>12.0.0</version>
     <relativePath>../../pom.xml</relativePath>
-	</parent>
+  </parent>
 
-	<artifactId>dom-impl</artifactId>
+  <artifactId>dom-impl</artifactId>
 
-	<name>Maven Integration of dom-impl modul</name>
-	<description>Maven modul for dom-impl jar</description>
+  <name>Maven Integration of dom-impl modul</name>
+  <description>Maven modul for dom-impl jar</description>
 
-	<dependencies>
+  <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
       <artifactId>dom-openapi</artifactId>
@@ -72,9 +72,17 @@
       <groupId>com.wutka</groupId>
       <artifactId>dtdparser</artifactId>
     </dependency>
-	</dependencies>
+  </dependencies>
 
-	<build>
-		<sourceDirectory>${idea.home}/xml/dom-impl/src</sourceDirectory>
-	</build>
+  <build>
+    <sourceDirectory>${idea.home}/xml/dom-impl/src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>${idea.home}/xml/dom-impl/src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+  </build>
 </project>

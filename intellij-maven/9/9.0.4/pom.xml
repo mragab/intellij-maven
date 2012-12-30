@@ -7,7 +7,7 @@
     <artifactId>parent.nine</artifactId>
     <version>1</version>
   </parent>
-  
+
   <groupId>org.jetbrains.idea</groupId>
   <artifactId>parent.nine.904</artifactId>
   <version>9.0.4</version>
@@ -188,6 +188,20 @@
               <groupId>org.jetbrains.thirdparthy</groupId>
               <artifactId>jna-utils</artifactId>
               <file>${idea.home}/lib/jna-utils.jar</file>
+              <version>${project.version}</version>
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install_compilerapi</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.jetbrains.thirdparthy</groupId>
+              <artifactId>compilerapi</artifactId>
+              <file>${idea.home}/lib/dev/compilerapi.jar</file>
               <version>${project.version}</version>
               <packaging>jar</packaging>
             </configuration>
@@ -513,7 +527,11 @@
         <artifactId>jna-utils</artifactId>
         <version>${project.version}</version>
       </dependency>
-
+      <dependency>
+        <groupId>org.jetbrains.thirdparthy</groupId>
+        <artifactId>compilerapi</artifactId>
+        <version>${project.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.apache.ant</groupId>
         <artifactId>ant</artifactId>

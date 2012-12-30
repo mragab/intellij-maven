@@ -63,6 +63,20 @@
 
   <build>
     <sourceDirectory>${idea.home}/xml/impl/src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>${idea.home}/xml/impl/src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>${idea.home}/xml/impl/resources</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
   </build>
 
 </project>

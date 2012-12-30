@@ -9,11 +9,11 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>relaxng</artifactId>
+  <artifactId>images</artifactId>
 
 
-  <name>Maven Integration of relaxng modul</name>
-  <description>Maven modul for relaxng jar</description>
+  <name>Maven Integration of images module</name>
+  <description>Maven module for images jar</description>
 
   <dependencies>
     <dependency>
@@ -22,11 +22,7 @@
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>xml</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.idea</groupId>
-      <artifactId>dom-openapi</artifactId>
+      <artifactId>util</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
@@ -34,36 +30,36 @@
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
+      <artifactId>projectModel-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
       <artifactId>lang-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
-      <artifactId>java-psi-api</artifactId>
+      <artifactId>lang-impl</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.jetbrains.thirdparthy</groupId>
-      <artifactId>rngom</artifactId>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>platform-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.jetbrains.thirdparthy</groupId>
-      <artifactId>jing</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.thirdparthy</groupId>
-      <artifactId>trang</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.thirdparthy</groupId>
-      <artifactId>isorelax</artifactId>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>platform-impl</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.sanselan</groupId>
+      <artifactId>sanselan</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
-    <sourceDirectory>${idea.home}/xml/relaxng/src</sourceDirectory>
+    <sourceDirectory>${idea.home}/images/src</sourceDirectory>
     <resources>
       <resource>
-        <directory>${idea.home}/xml/relaxng/src</directory>
+        <directory>${idea.home}/images/src</directory>
         <excludes>
           <exclude>**/*.java</exclude>
         </excludes>
