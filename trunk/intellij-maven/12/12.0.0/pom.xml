@@ -111,9 +111,18 @@
     <module>plugins/spellchecker</module>
     <module>plugins/properties</module>
     <module>plugins/devkit</module>
-    <module>plugins/maven/maven-server-api</module>
-    <module>plugins/ui-designer-jps-plugin</module>
+
+    <module>plugins/xpath</module>
+    <module>plugins/xpath/xslt-rt</module>
+    <module>plugins/IntelliLang</module>
+    <module>plugins/IntelliLang/IntelliLang-xml</module>
+    <!--<module>plugins/groovy</module>-->
+    <!--<module>plugins/maven/maven-server-api</module>-->
+    <!--<module>plugins/maven/maven2-server-impl</module>-->
+    <!--<module>plugins/maven/maven3-server-impl</module>-->
     <!--<module>plugins/maven</module>-->
+
+    <module>plugins/ui-designer-jps-plugin</module>
 
     <module>distribution/idea-openapi</module>
     <module>distribution/idea</module>
@@ -723,6 +732,28 @@
         <artifactId>devkit</artifactId>
         <version>${project.version}</version>
       </dependency>
+
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>xpath</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>xslt-rt</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>IntelliLang</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains.idea</groupId>
+        <artifactId>IntelliLang-xml</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>org.jetbrains.idea</groupId>
         <artifactId>maven-server-api</artifactId>
@@ -1015,6 +1046,12 @@
         <artifactId>gson</artifactId>
         <version>2.2.1</version>
       </dependency>
+      <dependency>
+        <groupId>jaxen</groupId>
+        <artifactId>jaxen</artifactId>
+        <version>1.1.4</version>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 </project>

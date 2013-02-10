@@ -31,7 +31,29 @@
         </excludes>
       </resource>
     </resources>
+
+      <plugins>
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>build-helper-maven-plugin</artifactId>
+              <executions>
+                  <execution>
+                      <id>add-source</id>
+                      <phase>generate-sources</phase>
+                      <goals>
+                          <goal>add-source</goal>
+                      </goals>
+                      <configuration>
+                          <sources>
+                              <source>${idea.home}/plugins/xpath/xpath-lang/src</source>
+                          </sources>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
   </build>
+
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
@@ -78,5 +100,10 @@
       <artifactId>resources-en</artifactId>
       <scope>provided</scope>
     </dependency>
+
+		<dependency>
+			<groupId>jaxen</groupId>
+			<artifactId>jaxen</artifactId>
+		</dependency>
   </dependencies>
 </project>

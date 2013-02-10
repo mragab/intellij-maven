@@ -6,18 +6,18 @@
     <artifactId>parent.twelve.1200</artifactId>
     <groupId>org.jetbrains.idea</groupId>
     <version>12.0.0</version>
-    <relativePath>../../pom.xml</relativePath>
+    <relativePath>../../../pom.xml</relativePath>
   </parent>
   <groupId>org.jetbrains.idea</groupId>
-  <artifactId>IntelliLang</artifactId>
+  <artifactId>IntelliLang-xml</artifactId>
 
-  <name>Maven module for IntelliLang</name>
-  <description>Maven integration for module IntelliLang</description>
+  <name>Maven module for IntelliLang-xml</name>
+  <description>Maven integration for module IntelliLang-xml</description>
   <build>
-    <sourceDirectory>${idea.home}/plugins/IntelliLang/src</sourceDirectory>
+    <sourceDirectory>${idea.home}/plugins/IntelliLang/xml-support</sourceDirectory>
     <resources>
       <resource>
-        <directory>${idea.home}/plugins/IntelliLang/src</directory>
+        <directory>${idea.home}/plugins/IntelliLang/xml-support</directory>
         <excludes>
           <exclude>**/*.java</exclude>
           <exclude>**/*.groovy</exclude>
@@ -38,7 +38,17 @@
     </dependency>
     <dependency>
       <groupId>org.jetbrains.idea</groupId>
+      <artifactId>xml</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
       <artifactId>RegExpSupport</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>xpath</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -46,10 +56,19 @@
       <artifactId>platform-api</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>IntelliLang</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
 		<dependency>
 			<groupId>jaxen</groupId>
 			<artifactId>jaxen</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
 		</dependency>
   </dependencies>
 </project>
