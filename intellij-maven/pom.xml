@@ -46,7 +46,7 @@
         </property>
       </activation>
       <properties>
-        <java_7_home>C:/Program Files (x86)/Java/jdk1.7.0_07</java_7_home>
+        <java_7_home>C:/Program Files (x86)/Java/jdk1.7.0_13</java_7_home>
         <idea904.home>E:/Projekte/Idea/ideaIC-95.627</idea904.home>
         <idea1054.home>E:/Projekte/Idea/ideaIC-107.777</idea1054.home>
         <idea1114.home>E:/Projekte/Idea/ideaIC-117.963</idea1114.home>
@@ -63,7 +63,7 @@
         </property>
       </activation>
       <properties>
-        <java_7_home>C:/Program Files (x86)/Java/jdk1.7.0_07</java_7_home>
+        <java_7_home>C:/Program Files (x86)/Java/jdk1.7.0_13</java_7_home>
         <idea904.home>D:/Idea/ideaIC-95.627</idea904.home>
         <idea1054.home>D:/Idea/ideaIC-107.777</idea1054.home>
         <idea1114.home>D:/Idea/ideaIC-117.798</idea1114.home>
@@ -158,6 +158,10 @@
           <configuration>
             <providerSelection>1.8</providerSelection>
           </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.6</version>
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
