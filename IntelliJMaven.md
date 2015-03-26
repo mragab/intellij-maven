@@ -1,0 +1,112 @@
+# What is intellij-maven and how to use it? #
+
+At this moment you can only download and install a ready-build version of IntelliJ Community Idea and its source code. You can build IntelliJ Idea from its sources, but the build is based on ant/gant/groovy and only works from IntelliJ Idea.
+
+It can be very annoying, if you want to write a new plugin for IntelliJ and want to use maven to setup and manage all of dependencies and build life cycle., because you normlly don't have access to any maven-ready artifacs of IntelliJ.
+
+"intellij-maven" is a maven project which can be used to create all of IntelliJ IDEA (Community version) build artifacts with maven and to install them into local maven repository.
+
+Just use intellij-maven to build all of IntelliJ artifacs and use these artifacs as maven dependencies of you project/plugin! Created build artifacts contains also source code files, so you can quickly and comfortably navigate from usages of IntelliJ classes to they source code.
+
+"intellij-maven" currently supports last builds of:
+  1. IntelliJ 9(9.0.4) - Build 95.627
+  1. IntelliJ 10(10.5.4) - Build 107.777
+  1. IntelliJ 11(11.1.2) - Build 117.418
+  1. IntelliJ 12-SNAPSHOT (12.0 EAP) - Build 118.479
+
+# How to start? #
+
+  1. Just Download and install IntelliJ IC distribution and source code:
+    * IntelliJ 9.0.4 IC [(exe)](http://download.jetbrains.com/idea/ideaIC-9.0.4.exe) / [(tar.gz)](http://download.jetbrains.com/idea/ideaIC-9.0.4.tar.gz) and  [Sources](http://download.jetbrains.com/idea/ideaIC-9.0.4-src.tar.bz2)
+    * IntelliJ 10.5.4 IC [(exe)](http://download.jetbrains.com/idea/ideaIC-10.5.4.exe) / [(tar.gz)](http://download.jetbrains.com/idea/ideaIC-10.5.4.tar.gz)  and  [Sources](http://download.jetbrains.com/idea/ideaIC-10.5.4-src.tar.bz2)
+    * IntelliJ 11.1.2 IC [(exe)](http://download.jetbrains.com/idea/ideaIC-11.1.2.exe) / [(tar.gz)](http://download.jetbrains.com/idea/ideaIC-11.1.2.tar.gz) and  [Sources](http://download.jetbrains.com/idea/ideaIC-11.1.2-src.tar.bz2)
+    * IntelliJ 12.0 EAP IC [(exe)](http://download.jetbrains.com/idea/ideaIC-118.749.exe) / [(tar.gz)](http://download.jetbrains.com/idea/ideaIC-118.749.tar.gz) and  [Sources](http://download.jetbrains.com/idea/ideaIC-118.749-src.tar.bz2)
+  1. svn checkout intellij-maven project from http://code.google.com/p/intellij-maven
+```
+$ svn checkout http://intellij-maven.googlecode.com/svn/trunk/intellij-maven
+```
+  1. Install IntelliJ IDEA on windows or just unpack downloaded tar.gz bundles on **nix.
+> IntelliJ distribution:
+```
+  $ tar -zxf ideaIC-9.0.4.tar.gz
+  $ tar -zxf ideaIC-10.5.4.tar.gz
+  $ tar -zxf ideaIC-11.1.2.tar.gz
+  $ tar -zxf ideaIC-118.749.tar.gz
+```
+> IntelliJ  Sources:
+```
+  $ tar -zxf ideaIC-9.0.4-src.tar.bz2
+  $ tar -zxf ideaIC-10.5.4-src.tar.bz2
+  $ tar -zxf ideaIC-11.1.2-src.tar.bz2
+  $ tar -zxf ideaIC-118.749-src.tar.bz2
+```
+  1. Unpack sources of IntelliJ bundle and use the path of the source directory in the next step
+  1. Create new profile in pom.xml in intellij-maven directory for youself like existing one:
+> >**```xml
+
+```
+   <profile>
+      <id>mpl</id>
+      <activation>
+        <property>
+          <name>env.COMPUTERNAME</name>
+          <value>MOSKAU</value>
+        </property>
+      </activation>
+      <properties>
+        <idea9.home>E:/Projekte/Idea/ideaIC-95.627</idea9.home>
+        <idea10.home>E:/Projekte/Idea/ideaIC-107.777</idea10.home>
+        <idea11.home>E:/Projekte/Idea/ideaIC-117.418</idea11.home>
+        <idea12.home>E:/Projekte/Idea/ideaIC-118.749</idea12.home>
+      </properties>
+    </profile>
+```
+```
+> > Use your own directories for idea9, idea10, idea11 and/or idea12 source places!
+  1. run "mvn clean" and "mvn install" in intellij-maven directory. Check for successful build.
+```
+$ mvn -Pyour_profile clean install
+```
+  1. run "mvn clean" and "mvn install -DIntelliJ=9" in intellij-maven directory. Check for successful build.
+  1. run "mvn clean" and "mvn install -DIntelliJ=10" in intellij-maven directory. Check for successful build.
+  1. run "mvn clean" and "mvn install -DIntelliJ=12" in intellij-maven directory. Check for successful build.
+  1. Now you should be able to use intellij-artifacs as maven dependencies like this:
+```xml
+
+```
+     <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>idea-openapi</artifactId>
+      <version>${idea.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>idea</artifactId>
+      <version>${idea.version}</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>util</artifactId>
+      <version>${idea.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>annotations</artifactId>
+      <version>${idea.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.idea</groupId>
+      <artifactId>extensions</artifactId>
+      <version>${idea.version}</version>
+    </dependency>
+```
+```
+
+  1. ${idea.version} can be one of:
+    * 9.0.4
+    * 10.5.4
+    * 11.1.2
+    * 12.0-SNAPSHOT
